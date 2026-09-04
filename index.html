@@ -52,10 +52,18 @@
     "@type": "AggregateRating",
     "ratingValue": "4.7",
     "reviewCount": "40"
-  }
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ]
 }
 </script>
-<!-- CLIENT INPUT: add "geo" (lat/long) and "openingHoursSpecification" to the JSON-LD above once confirmed — omitted here rather than guessed -->
+<!-- CLIENT INPUT: hours above are sourced from a third-party directory (Yellow Pages) cross-checked against the Google listing screenshot, not confirmed directly by the shop — please verify, especially any holiday hours. "geo" (lat/long) is omitted rather than guessed; add it once you have the real Google Maps coordinates. -->
 </head>
 <body>
 
@@ -155,7 +163,7 @@
       <li class="trust__item">
         <span class="trust__num" data-count="20">0</span><span class="trust__suffix">+</span>
         <span class="trust__label">years turning wrenches on Horton&nbsp;Rd</span>
-        <!-- CLIENT INPUT: confirm exact years in business -->
+        <!-- CLIENT INPUT: "20+" comes from a customer review mentioning twenty years — could not independently verify the exact figure, please confirm before launch -->
       </li>
       <li class="trust__item">
         <span class="trust__num" data-count="4" data-decimal="7">0</span>
@@ -209,8 +217,8 @@
         <article class="service-card">
           <span class="service-card__num">02</span>
           <h3>General Repair &amp; Maintenance</h3>
-          <p>Brakes, belts, fluids, tune-ups. Every make welcome, not just the two we specialize in.</p>
-          <!-- CLIENT INPUT: confirm full service list -->
+          <p>Brakes, tires, fluids, tune-ups. Every make welcome, not just the two we specialize in.</p>
+          <!-- CLIENT INPUT: this list covers what's corroborated across public directory listings (brakes, tires, diagnostics, maintenance) plus what's confirmed in reviews (Honda/Acura, wheel bearings). Add or correct anything specific to how the shop actually operates. -->
         </article>
 
         <article class="service-card">
@@ -356,8 +364,8 @@
         </blockquote>
       </div>
     </div>
-    <a class="text-link" href="https://www.google.com/maps/place/?q=place_id:" target="_blank" rel="noopener">Read all 40 reviews on Google →</a>
-    <!-- CLIENT INPUT: paste the real Google Maps place link -->
+    <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Fifty+Fourth+%26+Fourth+Auto+Repair+9727+Horton+Rd+SW+Calgary+AB+T2V+2X5" target="_blank" rel="noopener">Read all 40 reviews on Google →</a>
+    <!-- This is a live Google Maps search link built from the business name + address, so it resolves to the real listing. Swap in the exact Place link from Google Business Profile if you have it handy, for a slightly more direct jump. -->
   </section>
 
   <!-- 8. THE PEOPLE / SHOP -->
@@ -427,7 +435,7 @@
           <span class="accordion__icon" aria-hidden="true"></span>
         </button>
         <div class="accordion__panel" id="faq-5">
-          <p>We're on Horton Rd SW, serving Calgary and the surrounding area. <!-- CLIENT INPUT: confirm exact service radius / neighbourhoods --></p>
+          <p>We're on Horton Rd SW in south Calgary, serving the whole city and surrounding area. <!-- CLIENT INPUT: confirm if there's a hard radius or specific neighbourhoods to call out --></p>
         </div>
       </div>
 
@@ -495,8 +503,9 @@
     </div>
     <div>
       <h4>Hours</h4>
-      <!-- CLIENT INPUT: full weekly hours — only "opens 8am Friday" is confirmed from the Google listing -->
-      <p>Call for today's hours<br />Opens 8:00 AM Fri</p>
+      <!-- CLIENT INPUT: sourced from a third-party directory, cross-checked against the Google listing screenshot — please confirm, especially holidays -->
+      <p>Monday&ndash;Friday<br />8:00 AM&ndash;6:00 PM</p>
+      <p>Saturday&ndash;Sunday<br />Closed</p>
     </div>
     <div>
       <h4>Navigate</h4>
@@ -510,8 +519,9 @@
     </div>
     <div>
       <h4>Find us</h4>
-      <!-- CLIENT INPUT: social links -->
-      <p>Google Business Profile: 4.7★ (40 reviews)</p>
+      <p>4.7★ on Google, 40 reviews</p>
+      <!-- No public social media profiles turned up in research. If the shop opens an Instagram/Facebook later, link it here. -->
+      <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Fifty+Fourth+%26+Fourth+Auto+Repair+9727+Horton+Rd+SW+Calgary+AB+T2V+2X5" target="_blank" rel="noopener">View on Google →</a>
     </div>
   </div>
   <div class="site-footer__legal">
