@@ -390,7 +390,11 @@ body.hide-native-cursor, body.hide-native-cursor a, body.hide-native-cursor butt
 .hero {
   position: relative; min-height: 100svh;
   background: var(--ink); color: var(--paper);
-  display: flex; align-items: flex-end;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  /* Reserves clearance under the fixed header so hero text never sits
+     behind the logo/nav on shorter viewports or with real web fonts
+     (which render taller than the fallback fonts used during dev). */
+  padding-top: clamp(6.5rem, 16vh, 9rem);
   padding-bottom: clamp(3rem, 8vh, 6rem);
   overflow: hidden;
 }
