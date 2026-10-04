@@ -1,0 +1,95 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;background:#000;font-family:"Inter",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#fff;overflow:hidden}
+*{animation-play-state:paused!important}
+.pill{position:absolute;top:212px;left:50%;transform:translateX(-50%);background:#F97316;color:#0a0a0a;font-weight:900;font-size:26px;letter-spacing:2px;padding:12px 26px;border-radius:40px;white-space:nowrap}
+.cap{position:absolute;left:0;right:0;height:150px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:56px;line-height:1.02;letter-spacing:-1px;text-transform:uppercase;padding:0 40px}
+.cap1{top:300px;animation:popIn .45s .1s both}
+.cap2{top:913px;align-items:flex-end;padding-bottom:12px;font-size:52px;animation:popIn .45s 3.1s both}
+.ph{position:absolute;left:0;width:1080px;overflow:hidden}
+.ph img{width:100%;display:block}
+.ph1{top:450px;height:437px}
+.ph1 img{animation:zoom 3.4s 0s both linear}
+.ph2::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(transparent,#000 85%)}
+.ph2{top:1063px;height:460px;animation:fadeUp .5s 3.15s both}
+.call{position:absolute;left:26px;top:22px;width:520px;background:rgba(250,250,252,.97);color:#000;border-radius:26px;padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 12px 30px rgba(0,0,0,.35);animation:dropIn .35s .7s both, shake .5s 1s 3 both}
+.ic{flex:none;width:54px;height:54px;border-radius:14px;background:linear-gradient(180deg,#5af575,#14c23a);display:flex;align-items:center;justify-content:center}
+.call b{display:block;font-size:22px;font-weight:700;color:#6b6b72}
+.call .num{font-size:30px;font-weight:700}
+.call .missed{position:absolute;inset:0;border-radius:26px;background:#fff;display:flex;align-items:center;gap:14px;padding:16px 20px;opacity:0;animation:show .01s 2.4s both}
+.missed .ic{background:linear-gradient(180deg,#ff6b6b,#dc2626)}
+.missed b{color:#dc2626}
+.or{position:absolute;top:842px;left:50%;margin-left:-50px;width:100px;height:100px;border-radius:50%;background:#fff;color:#000;border:6px solid #000;font-weight:900;font-size:36px;display:flex;align-items:center;justify-content:center;z-index:5;animation:popIn .35s 2.8s both}
+.notes{position:absolute;left:36px;right:36px;top:222px;z-index:2;background:#f4f4f7;border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.n{background:#f4f4f7;color:#000;border-radius:24px;padding:16px 20px;display:flex;gap:14px;margin-bottom:0;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.n .ic{width:50px;height:50px;border-radius:12px}
+.n .bd{flex:1}
+.n .h{display:flex;justify-content:space-between;font-size:21px}.n .h b{font-weight:700}.n .h span{color:#6b6b72}
+.n p{font-size:27px;line-height:1.24;margin-top:3px;min-height:67px}
+.n.sm{border-top:1px solid #dcdce2;border-radius:0 0 24px 24px}
+.n.sm p{min-height:0;color:#6b6b72;font-size:25px}
+.ty{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;max-width:0}
+.ty1{animation:type1 1.6s 3.9s steps(50,end) both}
+.ty2{animation:type2 1.3s 5.3s steps(40,end) both}
+.dots{display:inline-flex;gap:6px;padding:8px 0;animation:hide .01s 3.9s both}
+.dots i{width:12px;height:12px;border-radius:50%;background:#9ca3af;animation:blink .9s 3.2s 1 both}
+.stamp{position:absolute;right:30px;top:24px;background:#16a34a;color:#fff;font-weight:900;font-size:30px;letter-spacing:1px;padding:12px 22px;border-radius:14px;transform:rotate(-4deg);box-shadow:0 10px 24px rgba(0,0,0,.35);animation:stampIn .35s 6.1s both}
+.foot{position:absolute;top:1560px;left:60px;right:60px;display:flex;align-items:center;justify-content:space-between}
+.cta{background:#F97316;color:#fff;font-weight:900;font-size:36px;padding:24px 38px;border-radius:18px}
+.handle{font-size:26px;font-weight:700;color:#9ca3af}
+/* end card */
+.end{position:absolute;inset:0;z-index:20;background:radial-gradient(circle at 80% 30%,rgba(249,115,22,.28),rgba(249,115,22,0) 45%),#0a1830;display:flex;flex-direction:column;justify-content:center;padding:0 80px 160px;animation:slideIn .45s 7.6s both}
+.end .tag{align-self:flex-start;font-size:26px;font-weight:900;letter-spacing:2px;color:#fdba74;border:3px solid rgba(249,115,22,.6);background:rgba(249,115,22,.15);padding:12px 24px;border-radius:40px}
+.end h1{font-size:104px;line-height:1;font-weight:900;letter-spacing:-3.5px;margin-top:40px}
+.end h1 em{font-style:normal;color:#F97316}
+.end p{font-size:40px;line-height:1.3;color:#d3dcea;font-weight:500;margin-top:36px}.end p b{color:#fff}
+.end ul{list-style:none;margin-top:36px}
+.end li{font-size:38px;font-weight:800;margin-bottom:16px;display:flex;gap:16px;align-items:center}
+.end li i{width:44px;height:44px;border-radius:50%;background:#F97316;display:flex;align-items:center;justify-content:center;flex:none}
+.end .cta{align-self:flex-start;margin-top:50px;font-size:48px;padding:32px 52px;box-shadow:0 16px 40px rgba(249,115,22,.5);animation:pulse 1s 8.6s 3 both}
+.end .handle{margin-top:30px;font-size:30px}
+@keyframes popIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes dropIn{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:none}}
+@keyframes shake{0%,100%{transform:rotate(0)}20%{transform:rotate(-3deg)}40%{transform:rotate(3deg)}60%{transform:rotate(-2deg)}80%{transform:rotate(2deg)}}
+@keyframes show{to{opacity:1}}
+@keyframes hide{to{display:none;width:0;opacity:0}}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes type1{to{max-width:720px}}
+@keyframes type2{to{max-width:720px}}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes stampIn{from{opacity:0;transform:rotate(-4deg) scale(2)}to{opacity:1;transform:rotate(-4deg) scale(1)}}
+@keyframes slideIn{from{transform:translateY(100%)}to{transform:none}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+</style></head><body>
+<div class="pill">CALGARY HVAC &amp; PLUMBING</div>
+<div class="cap cap1">Answering your own phone on a job:</div>
+<div class="ph ph1"><img src="photo-top.png">
+ <div class="call"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div><div><b>Incoming call</b><div class="num">(403) 555-0148</div></div>
+  <div class="missed"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div><div><b>Missed call</b><div class="num">(403) 555-0148</div></div></div>
+ </div>
+</div>
+<div class="or">OR</div>
+<div class="cap cap2">Letting your line text them back:</div>
+<div class="ph ph2"><img src="photo-bottom.png">
+ <div class="stamp">JOB SAVED</div>
+ <div class="notes">
+  <div class="n"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.6 3.4 6.1-.2 1.3-.9 2.6-1.9 3.6 2 0 3.8-.8 5.1-1.8 1.1.3 2.2.4 3.4.4 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg></div>
+   <div class="bd"><div class="h"><b>(403) 555-0148</b><span>now</span></div>
+   <p><span class="dots"><i></i><i></i><i></i></span><span class="ty ty1">Furnace quit, house is down to 12.</span><br><span class="ty ty2">Can someone come today?</span></p></div></div>
+  <div class="n sm"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div>
+   <div class="bd"><div class="h"><b>Missed call</b><span>2m ago</span></div><p>Texted back from your number, in your name</p></div></div>
+ </div>
+</div>
+<div class="foot"><div class="cta">Book a free call &rarr;</div><div class="handle">@ravaraautomations</div></div>
+<div class="end">
+ <div class="tag">CALGARY HVAC &amp; PLUMBING</div>
+ <h1>Missed a call?<br><em>Still book the job.</em></h1>
+ <p>Every missed call gets a text back in seconds, <b>from your business, in your name.</b></p>
+ <ul><li><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>No app. No new number.</li><li><i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>Nothing for you to do.</li></ul>
+ <div class="cta">Book a free call &rarr;</div>
+ <div class="handle">@ravaraautomations</div>
+</div>
+</body></html>
