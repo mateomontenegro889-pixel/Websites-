@@ -1,0 +1,45 @@
+# Ad #6: direct-response ad aimed at the owner (1:1).
+HEAD = '<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>'
+CSS = '''
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;font-family:"Inter",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#fff}
+body{position:relative;overflow:hidden;background:radial-gradient(circle at 100% 0%,rgba(249,115,22,.22) 0%,rgba(249,115,22,0) 40%),#0a1830}
+.bar{background:#F97316;color:#0a0a0a;text-align:center;font-size:25px;font-weight:900;letter-spacing:2px;padding:20px 0}
+.wrap{height:1012px;padding:0 60px 10px;display:flex;flex-direction:column;justify-content:space-evenly}
+h1{font-size:74px;line-height:1.03;font-weight:900;letter-spacing:-2.4px}
+h1 em{font-style:normal;color:#F97316}
+.sub{font-size:31px;line-height:1.35;color:#d3dcea;font-weight:500;margin-top:18px}.sub b{color:#fff}
+.steps{display:flex;gap:16px}
+.st{flex:1;background:#fff;color:#0a0a0a;border-radius:24px;padding:30px 24px 32px;position:relative}
+.n{width:56px;height:56px;border-radius:50%;background:#0a1830;color:#fff;font-weight:900;font-size:26px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.st.hot .n{background:#F97316}
+.st b{display:block;font-size:31px;font-weight:800;line-height:1.15;letter-spacing:-.5px}
+.st p{font-size:23px;color:#4b5563;font-weight:500;line-height:1.3;margin-top:8px}
+.arrow{position:absolute;right:-17px;top:50%;margin-top:-17px;width:34px;height:34px;border-radius:50%;background:#F97316;z-index:2;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#fff}
+.no{display:flex;justify-content:space-between;margin-top:22px;font-size:26px;font-weight:700;color:#d3dcea}
+.no span{display:flex;align-items:center;gap:10px}
+.no i{width:28px;height:28px;border-radius:50%;background:rgba(249,115,22,.2);border:2px solid #F97316;display:flex;align-items:center;justify-content:center}
+.bottom{display:flex;align-items:center;gap:30px}
+.cta{flex:none;display:inline-flex;align-items:center;gap:14px;background:#F97316;color:#fff;font-size:36px;font-weight:900;padding:28px 42px;border-radius:18px;box-shadow:0 14px 34px rgba(249,115,22,.45)}
+.urg{font-size:25px;font-weight:700;line-height:1.3;color:#d3dcea}.urg b{color:#fff;display:block;font-size:28px;font-weight:900}
+'''
+CK = '<i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></i>'
+SNOW = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2.4" stroke-linecap="round" style="vertical-align:-3px;margin-right:6px"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11"/></svg>'
+html = HEAD + CSS + f'''</style></head><body>
+<div class="bar">CALGARY HVAC &amp; PLUMBING OWNERS</div>
+<div class="wrap">
+ <div><h1>Stop losing jobs to the<br><em>next company on the list.</em></h1>
+ <p class="sub">Every missed call gets a text back in seconds &mdash; <b>from your business, in your name.</b></p></div>
+ <div><div class="steps">
+  <div class="st"><div class="n">1</div><b>Phone rings. You&rsquo;re on the tools.</b><p>You can&rsquo;t pick up. That&rsquo;s fine.</p><div class="arrow">&rarr;</div></div>
+  <div class="st hot"><div class="n">2</div><b>Your line texts them back.</b><p>In seconds. In your name. Not ours.</p><div class="arrow">&rarr;</div></div>
+  <div class="st"><div class="n">3</div><b>The job is waiting for you.</b><p>They reply. You call back when your hands are free.</p></div>
+ </div>
+ <div class="no"><span>{CK}No app to learn</span><span>{CK}No new number</span><span>{CK}Nothing for you to do</span></div></div>
+<div class="bottom">
+ <div class="cta">Book a free call &rarr;</div>
+ <div class="urg"><b>{SNOW}Get set up before the first cold snap.</b>See how it works on your own line.</div>
+</div>
+</div>
+</body></html>'''
+open('ravara-ig6-direct.html','w').write(html)
