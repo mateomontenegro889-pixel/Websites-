@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;font-family:"Inter",-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#fff}
+body{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 90%,rgba(249,115,22,.30) 0%,rgba(249,115,22,0) 45%),
+     radial-gradient(circle at 0% 0%,#16305a 0%,rgba(22,48,90,0) 55%),#0a1830}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1.5px,transparent 1.5px);background-size:28px 28px}
+.wrap{position:absolute;inset:60px 76px 120px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{align-self:flex-start;font-size:20px;font-weight:800;letter-spacing:1.4px;color:#fdba74;background:rgba(249,115,22,.16);border:2px solid rgba(249,115,22,.55);padding:10px 20px;border-radius:30px;margin-bottom:30px}
+h1{font-size:86px;line-height:1.04;font-weight:900;letter-spacing:-2.6px}
+h1 em{font-style:normal;color:#F97316}
+.sub{font-size:36px;line-height:1.35;color:#d3dcea;font-weight:500;margin-top:24px}.sub b{color:#fff}
+.foot{position:absolute;left:76px;right:76px;bottom:52px;display:flex;justify-content:space-between;align-items:center;font-size:22px;font-weight:700;color:#9fb0c8}
+.brand{display:flex;align-items:center;gap:10px;color:#fff}
+.mk{width:30px;height:30px;border-radius:8px;background:#F97316;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;color:#fff}
+.pg{display:flex;gap:8px}.pg i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25)}.pg i.on{background:#F97316;width:28px;border-radius:5px}
+.swipe{color:#F97316;font-size:26px;font-weight:800}
+/* iOS-style cards */
+.card{background:#fff;color:#000;border-radius:34px;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+.note{display:flex;align-items:center;gap:22px;padding:28px 32px}
+.note .ic{flex:none;width:76px;height:76px;border-radius:18px;background:linear-gradient(180deg,#5af575,#14c23a);display:flex;align-items:center;justify-content:center}
+.note .t{flex:1}.note .row{display:flex;justify-content:space-between;font-size:30px;color:#6b6b72}
+.note .row b{color:#000;font-weight:700}.note .num{font-size:48px;font-weight:600;margin-top:4px;letter-spacing:-.5px}
+.recents{padding:10px 0}
+.recents h3{font-size:24px;font-weight:700;color:#8e8e93;letter-spacing:.5px;padding:18px 34px 8px;text-transform:uppercase}
+.rec{display:flex;align-items:center;justify-content:space-between;padding:22px 34px;border-top:1px solid #e5e5ea}
+.rec b{display:block;font-size:34px;font-weight:600;letter-spacing:-.4px}
+.rec small{font-size:24px;color:#8e8e93}
+.rec .r{text-align:right;font-size:24px;color:#8e8e93}
+.tag{display:inline-block;font-size:22px;font-weight:800;padding:6px 14px;border-radius:12px;margin-top:6px}
+.tag.no{background:#fee2e2;color:#dc2626}.tag.yes{background:#dcfce7;color:#15803d}
+.thread{padding:26px 26px 30px;display:flex;flex-direction:column;gap:14px}
+.thead{text-align:center;font-size:22px;color:#8e8e93;padding-bottom:6px}.thead b{display:block;color:#000;font-size:26px;font-weight:600}
+.b{max-width:82%;padding:16px 22px;font-size:30px;line-height:1.27;border-radius:30px;letter-spacing:-.2px}
+.me{align-self:flex-end;background:linear-gradient(180deg,#1a8cff,#0a7aff);color:#fff;border-bottom-right-radius:8px}
+.them{align-self:flex-start;background:#e9e9eb;border-bottom-left-radius:8px}
+.list{list-style:none;margin-top:36px}
+.list li{display:flex;align-items:center;gap:22px;font-size:42px;font-weight:700;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.list li:last-child{border:none}
+.list i{flex:none;width:46px;height:46px;border-radius:50%;background:#F97316;display:flex;align-items:center;justify-content:center}
+.pull{margin-top:44px;background:rgba(249,115,22,.14);border-left:6px solid #F97316;border-radius:0 18px 18px 0;padding:24px 30px;font-size:36px;font-weight:800;letter-spacing:-.5px}
+.cta{align-self:flex-start;display:inline-flex;align-items:center;gap:16px;background:#F97316;color:#fff;font-size:50px;font-weight:800;padding:36px 60px;border-radius:22px;box-shadow:0 18px 40px rgba(249,115,22,.5);margin-top:44px}
+.towns{margin-top:48px;font-size:26px;font-weight:600;color:#9fb0c8;line-height:1.5}
+</style></head><body><div class="dots"></div><div class="wrap">
+ <h1>Now your line<br>texts them back.</h1>
+ <p class="sub" style="margin-top:12px">In seconds. <b>From your business, in your name.</b></p>
+ <div class="card thread" style="margin-top:60px">
+  <div class="thead"><b>Apex Heating &amp; Air</b>Text Message &middot; 2:14 PM</div>
+  <div class="b me">Sorry we missed you. Apex Heating &amp; Air here &mdash; we&rsquo;re on a job. What&rsquo;s going on?</div>
+  <div class="b them">Furnace quit. House is down to 12</div>
+  <div class="b me">No heat &mdash; got it. Texting you a time for a tech today.</div>
+ </div>
+</div><div class="foot"><div class="brand"><span class="mk">R</span>Ravara</div><div class="pg"><i class=""></i><i class=""></i><i class="on"></i><i class=""></i><i class=""></i></div><span class="swipe">Swipe &rarr;</span></div></body></html>
