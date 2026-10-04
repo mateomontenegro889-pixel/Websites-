@@ -1,0 +1,79 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1080px;font-family:"Inter",-apple-system,"Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;color:#fff}
+body{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 40%,rgba(249,115,22,.36) 0%,rgba(249,115,22,0) 42%),
+     radial-gradient(circle at 0% 100%,#16305a 0%,rgba(22,48,90,0) 55%),#0a1830}
+.dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.5px,transparent 1.5px);background-size:28px 28px;-webkit-mask-image:linear-gradient(90deg,#000,transparent 60%)}
+.brand{font-weight:800;letter-spacing:-.3px;display:flex;align-items:center;gap:10px}
+.brand .mk{width:30px;height:30px;border-radius:8px;background:#F97316;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px}
+.eyebrow{align-self:flex-start;font-weight:800;letter-spacing:1.4px;color:#fdba74;background:rgba(249,115,22,.16);border:2px solid rgba(249,115,22,.55);border-radius:30px}
+h1{font-weight:900;line-height:1.02;white-space:nowrap}
+h1 em{font-style:normal;color:#F97316}
+.sub{color:#dbe3f0;font-weight:500;line-height:1.3}.sub b{color:#fff}
+ul{list-style:none}
+li{font-weight:700;display:flex;align-items:center;gap:16px}
+li i{flex:none;width:38px;height:38px;border-radius:50%;background:#F97316;display:flex;align-items:center;justify-content:center}
+.cta{align-self:flex-start;display:inline-flex;align-items:center;gap:14px;background:#F97316;color:#fff;font-weight:800;border-radius:18px;box-shadow:0 14px 34px rgba(249,115,22,.45)}
+.badge{position:absolute;z-index:5;background:#fff;border-radius:22px;padding:18px 24px;display:flex;align-items:center;gap:16px;box-shadow:0 20px 44px rgba(0,0,0,.45)}
+.badge .ic{width:56px;height:56px;border-radius:14px;background:#22c55e;display:flex;align-items:center;justify-content:center}
+.badge b{display:block;font-size:24px;font-weight:800;color:#0a1830}.badge span{font-size:19px;color:#4b5567;font-weight:600}
+
+.phone{width:500px;height:1010px;border-radius:78px;background:#1c1c1e;padding:14px;position:relative;
+       box-shadow:0 50px 90px rgba(0,0,0,.6),inset 0 0 0 2px #3a3a3c;transform-origin:top left}
+.phone::before{content:"";position:absolute;right:-4px;top:250px;width:4px;height:110px;background:#2c2c2e;border-radius:0 3px 3px 0}
+.phone::after{content:"";position:absolute;left:-4px;top:210px;width:4px;height:70px;background:#2c2c2e;border-radius:3px 0 0 3px;box-shadow:0 100px 0 #2c2c2e}
+.screen{width:100%;height:100%;border-radius:64px;overflow:hidden;position:relative;color:#fff;
+        background:radial-gradient(circle at 30% 85%,#c2410c 0%,rgba(194,65,12,0) 45%),radial-gradient(circle at 85% 20%,#1e3a8a 0%,rgba(30,58,138,0) 55%),linear-gradient(180deg,#0b1430,#111a3a 60%,#2a1a2a)}
+.island{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:132px;height:38px;background:#000;border-radius:20px}
+.status{height:58px;display:flex;justify-content:space-between;align-items:center;padding:6px 36px 0 44px;font-weight:600;font-size:18px}
+.icons{display:flex;gap:7px;align-items:center}
+.lock{text-align:center;margin-top:18px}
+.date{font-size:21px;font-weight:600;opacity:.9}
+.date span{opacity:.85}
+.clock{font-size:118px;font-weight:700;letter-spacing:-3px;line-height:1;margin-top:2px}
+.notes{position:absolute;left:14px;right:14px;top:330px}
+.n{background:rgba(245,245,250,.86);color:#000;border-radius:26px;padding:15px 17px 17px;margin-bottom:10px;display:flex;gap:13px}
+.n .ap{flex:none;width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center}
+.n .msg{background:linear-gradient(180deg,#5af575,#14c23a)}.n .ph{background:linear-gradient(180deg,#5af575,#14c23a)}
+.n .body{flex:1;min-width:0}
+.n .nh{display:flex;justify-content:space-between;font-size:17px}
+.n .nh b{font-weight:600}.n .nh span{color:#6b6b72}
+.n p{font-size:21px;line-height:1.28;margin-top:3px}
+.n.small p{color:#3a3a40}
+.bar{position:absolute;bottom:40px;left:0;right:0;display:flex;justify-content:space-between;padding:0 50px}
+.bar div{width:52px;height:52px;border-radius:50%;background:rgba(40,40,50,.55);display:flex;align-items:center;justify-content:center}
+.home{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:150px;height:5px;border-radius:3px;background:#fff}
+
+.copy{position:absolute;left:60px;top:0;bottom:0;width:540px;display:flex;flex-direction:column;justify-content:center}
+.brand{font-size:24px;margin-bottom:24px}
+.eyebrow{font-size:18px;padding:10px 18px}
+h1{font-size:74px;letter-spacing:-2.6px;margin:22px 0 20px}
+.sub{font-size:27px;max-width:480px;margin-bottom:26px}
+li{font-size:26px;margin-bottom:16px}
+li i{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.25)}
+.cta{font-size:32px;padding:24px 38px;margin-top:18px}
+.stage{position:absolute;right:40px;top:70px;width:470px}.stage .phone{transform:scale(.94)}
+</style></head><body><div class="dots"></div>
+<div class="copy">
+ <div class="brand"><span class="mk">R</span>Ravara Automations</div>
+ <div class="eyebrow">CALGARY HVAC &amp; PLUMBING</div>
+ <h1>You missed<br>the call.<br><em>Not the job.</em></h1>
+ <p class="sub">While you&rsquo;re on the tools, your business texts the caller back <b>in your name.</b> The job is waiting when your hands are free.</p>
+ <ul><li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></i>No robot answering your phone</li><li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></i>No call centre</li><li><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></i>No new app, no new number</li></ul>
+ <div class="cta">Book a free call <span>&rarr;</span></div>
+</div>
+<div class="stage"><div class="phone"><div class="screen"><div class="island"></div><div class="status"><span>2:47</span><span class="icons">
+<svg width="20" height="13" viewBox="0 0 20 13" fill="#fff"><rect x="0" y="9" width="3.5" height="4" rx="1"/><rect x="5.5" y="6" width="3.5" height="7" rx="1"/><rect x="11" y="3" width="3.5" height="10" rx="1"/><rect x="16.5" y="0" width="3.5" height="13" rx="1"/></svg>
+<svg width="28" height="13" viewBox="0 0 28 13" fill="#fff"><rect x=".5" y=".5" width="24" height="12" rx="3.5" fill="none" stroke="#fff" opacity=".5"/><rect x="2.5" y="2.5" width="12" height="8" rx="2"/><path d="M26 4.5v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" opacity=".5"/></svg></span></div>
+<div class="lock"><div class="date">Tuesday, January 12 <span>&middot; &minus;28&deg;</span></div><div class="clock">2:47</div></div>
+<div class="notes">
+ <div class="n"><div class="ap msg"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.6 3.4 6.1-.2 1.3-.9 2.6-1.9 3.6 2 0 3.8-.8 5.1-1.8 1.1.3 2.2.4 3.4.4 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg></div><div class="body"><div class="nh"><b>(403) 555-0148</b><span>now</span></div>
+   <p>Furnace quit overnight, house is down to 12. Can someone come today?</p></div></div>
+ <div class="n small"><div class="ap ph"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></div><div class="body"><div class="nh"><b>Missed Call</b><span>4m ago</span></div>
+   <p>(403) 555-0148</p></div></div>
+ <div class="n"><div class="ap msg"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.4 1.3 4.6 3.4 6.1-.2 1.3-.9 2.6-1.9 3.6 2 0 3.8-.8 5.1-1.8 1.1.3 2.2.4 3.4.4 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg></div><div class="body"><div class="nh"><b>(403) 555-0193</b><span>38m ago</span></div>
+   <p>Hot water tank is leaking in the basement. Got time tomorrow morning?</p></div></div>
+</div>
+<div class="bar"><div><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M9 2h6l-1 7h3l-7 13 1-9H8z"/></svg></div><div><svg width="24" height="20" viewBox="0 0 24 20" fill="#fff"><path d="M8 2l-2 3H3a2 2 0 00-2 2v10a2 2 0 002 2h18a2 2 0 002-2V7a2 2 0 00-2-2h-3l-2-3zm4 5a5 5 0 110 10 5 5 0 010-10z"/></svg></div></div>
+<div class="home"></div></div></div></div>
+</body></html>
